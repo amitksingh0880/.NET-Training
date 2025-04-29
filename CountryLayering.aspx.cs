@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace CountryCodeApplication
 {
-    public partial class CountryLayering : System.Web.UI.Page
+    public partial class CountryLayering : CountryCodeApplication.AuthorizationRoute
     {
         private readonly string connectionString = ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString;
 

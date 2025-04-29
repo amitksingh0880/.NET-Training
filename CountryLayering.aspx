@@ -53,6 +53,9 @@
                 </tr>
             </table>
         </div>
+        <div>
+            <label id="country"></label>
+        </div>
         <a href="Dashboard.aspx">Navigate to Dashboard</a>
     </form>
 </body>

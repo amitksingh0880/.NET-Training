@@ -6,7 +6,7 @@ using System.Web.UI;
 
 namespace CountryCodeApplication
 {
-    public partial class UsersData : System.Web.UI.Page
+    public partial class UsersData : CountryCodeApplication.AuthorizationRoute
     {
         private readonly string connStr = ConfigurationManager.ConnectionStrings["MyConnection"]?.ConnectionString;
 

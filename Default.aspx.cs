@@ -6,7 +6,7 @@ using System.Data.SqlClient;
  
 namespace CountryCodeApplication
 { 
-    public partial class Default : System.Web.UI.Page
+    public partial class Default : CountryCodeApplication.AuthorizationRoute
     {
         string connStr = ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString;
 

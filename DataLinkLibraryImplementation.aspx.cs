@@ -10,7 +10,7 @@ using AgeCalculator;
 
 namespace CountryCodeApplication
 {
-    public partial class DataLinkLibraryImplementation : System.Web.UI.Page
+    public partial class DataLinkLibraryImplementation : CountryCodeApplication.AuthorizationRoute
     {
         protected void Page_Load(object sender, EventArgs e)
         {
