@@ -10,7 +10,7 @@ namespace CountryCodeApplication
     public partial class AddUserDetails : CountryCodeApplication.AuthorizationRoute
     {
         private readonly string connStr = ConfigurationManager.ConnectionStrings["MyConnection"]?.ConnectionString;
-         int userId;
+        int userId;
         private readonly string imageFolder = "~/Uploads/";
 
         protected void Page_Load(object sender, EventArgs e)

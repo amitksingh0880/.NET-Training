@@ -18,13 +18,16 @@
 <br /><br />
 <asp:Label ID="lblMessage" runat="server" ForeColor="Green" />
 <br /><br />
-<asp:GridView ID="gvPhoneNumbers" runat="server" AutoGenerateColumns="false" BorderStyle="Solid" BorderWidth="1" BorderColor="#999">
-<Columns>
-<asp:BoundField DataField="ID" HeaderText="ID" />
-<asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" />
-<asp:BoundField DataField="CountryName" HeaderText="Country" />
-</Columns>
+<asp:GridView ID="gvPhoneNumbers" runat="server" AutoGenerateColumns="false" 
+    AllowPaging="true" PageSize="5" BorderStyle="Solid" BorderWidth="1" 
+    BorderColor="#999" OnPageIndexChanging="gvPhoneNumbers_PageIndexChanging">
+    <Columns>
+        <asp:BoundField DataField="ID" HeaderText="ID" />
+        <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" />
+        <asp:BoundField DataField="CountryName" HeaderText="Country" />
+    </Columns>
 </asp:GridView>
+
       <a href="DataLinkLibraryImplementation.aspx">Age Calculator through dll</a>
 </div>
 </form>

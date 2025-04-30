@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CountryLayering.aspx.cs" Inherits="CountryCodeApplication.CountryLayering" %>
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -10,10 +9,16 @@
         table { margin: 20px; }
         td { padding: 5px; }
         .button { margin-top: 10px; }
+        .gridview { width: 100%; border-collapse: collapse; margin: 20px; }
+        .gridview th, .gridview td { border: 1px solid #ddd; padding: 8px; text-align: left; }
     </style>
 </head>
 <body>
+   
     <form id="form1" runat="server">
+         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
         <div>
             <h2>Select Location</h2>
             <asp:Label ID="lblError" runat="server" CssClass="error" Visible="false"></asp:Label>
@@ -54,9 +59,54 @@
             </table>
         </div>
         <div>
-            <label id="country"></label>
+            <h2>Your Selections</h2>
+            <asp:GridView ID="gvUserSelections" runat="server" AutoGenerateColumns="False" AllowPaging="true" 
+                CssClass="gridview" OnPageIndexChanging="gvUserSelections_PageIndexChanging" 
+                OnRowEditing="gvUserSelections_RowEditing" OnRowCancelingEdit="gvUserSelections_RowCancelingEdit" 
+                OnRowUpdating="gvUserSelections_RowUpdating" DataKeyNames="UserId">
+                <Columns>
+                    <asp:BoundField DataField="UserId" HeaderText="User ID" ReadOnly="true" />
+                    <asp:BoundField DataField="Username" HeaderText="Username" />
+                    <asp:TemplateField HeaderText="Country">
+                        <ItemTemplate>
+                            <%# Eval("CountryName") %>
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:DropDownList ID="ddlCountryEdit" runat="server" AutoPostBack="true" 
+                                OnSelectedIndexChanged="ddlCountryEdit_SelectedIndexChanged">
+                                <asp:ListItem Value="0">Select Country</asp:ListItem>
+                            </asp:DropDownList>
+                        </EditItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="State">
+                        <ItemTemplate>
+                            <%# Eval("StateName") %>
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:DropDownList ID="ddlStateEdit" runat="server" AutoPostBack="true" 
+                                OnSelectedIndexChanged="ddlStateEdit_SelectedIndexChanged">
+                                <asp:ListItem Value="0">Select State</asp:ListItem>
+                            </asp:DropDownList>
+                        </EditItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="District">
+                        <ItemTemplate>
+                            <%# Eval("DistrictName") %>
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            <asp:DropDownList ID="ddlDistrictEdit" runat="server">
+                                <asp:ListItem Value="0">Select District</asp:ListItem>
+                            </asp:DropDownList>
+                        </EditItemTemplate>
+                    </asp:TemplateField>
+                    <asp:CommandField ShowEditButton="True" />
+                </Columns>
+            </asp:GridView>
         </div>
         <a href="Dashboard.aspx">Navigate to Dashboard</a>
+                  </ContentTemplate>
+        </asp:UpdatePanel>
     </form>
+      
 </body>
 </html>

@@ -631,7 +631,7 @@ namespace CountryCodeApplication
         {
             try
             {
-                string currentPage = "/"+Request.AppRelativeCurrentExecutionFilePath.Replace("~/", "").ToLower();
+                string currentPage = "/" + Request.AppRelativeCurrentExecutionFilePath.Replace("~/", "").ToLower();
                 CurrentUrl.Text = currentPage;
                 using (SqlConnection conn = new SqlConnection(connStr_A))
                 {

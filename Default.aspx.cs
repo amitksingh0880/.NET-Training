@@ -3,7 +3,8 @@ using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
- 
+using System.Web.UI.WebControls;
+
 namespace CountryCodeApplication
 { 
     public partial class Default : CountryCodeApplication.AuthorizationRoute
@@ -86,5 +87,12 @@ namespace CountryCodeApplication
                 lblMessage.Text = "Please select a country and enter a phone number.";
             }
         }
+
+        protected void gvPhoneNumbers_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvPhoneNumbers.PageIndex = e.NewPageIndex;
+            LoadPhoneNumbers();
+        }
+
     }
 }
