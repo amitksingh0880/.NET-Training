@@ -47,6 +47,9 @@
     <Reference Include="AgeCalculator">
       <HintPath>C:\Users\amit.singh\source\repos\AgeCalculator\bin\Debug\netstandard2.0\AgeCalculator.dll</HintPath>
     </Reference>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -110,6 +113,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AddUserDetails.aspx" />
+    <Content Include="AjaxToolkit.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -180,6 +184,13 @@
     <Compile Include="AddUserDetails.aspx.designer.cs">
       <DependentUpon>AddUserDetails.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AjaxToolkit.aspx.cs">
+      <DependentUpon>AjaxToolkit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxToolkit.aspx.designer.cs">
+      <DependentUpon>AjaxToolkit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -189,6 +200,7 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="AsyncFileUploadEventArgs.cs" />
     <Compile Include="AuthorizationRoute.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

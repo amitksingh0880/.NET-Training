@@ -12,6 +12,14 @@
         .gridview { width: 100%; border-collapse: collapse; margin: 20px; }
         .gridview th, .gridview td { border: 1px solid #ddd; padding: 8px; text-align: left; }
     </style>
+
+        <script type="text/javascript">
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+                setTimeout(function () {
+
+                }, 7000);
+            });
+         </script>
 </head>
 <body>
    
@@ -106,7 +114,16 @@
         <a href="Dashboard.aspx">Navigate to Dashboard</a>
                   </ContentTemplate>
         </asp:UpdatePanel>
-    </form>
+        <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1" DisplayAfter="100">
+    <ProgressTemplate>
+        <div style="position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#fff; padding:20px; border:1px solid #ccc; box-shadow:0 0 10px rgba(0,0,0,0.2); z-index:1000;">
       
+            <span style="margin-left:10px;">Please wait...</span>
+        </div>
+    </ProgressTemplate>
+</asp:UpdateProgress>
+    </form>
+  
+
 </body>
 </html>

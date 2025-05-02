@@ -11,7 +11,7 @@ namespace CountryCodeApplication
 {
 
 
-    public partial class CountryLayering
+    public partial class AjaxToolkit
     {
 
         /// <summary>
@@ -33,75 +33,102 @@ namespace CountryCodeApplication
         protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
-        /// UpdatePanel1 control.
+        /// MyAccordion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::AjaxControlToolkit.Accordion MyAccordion;
 
         /// <summary>
-        /// lblError control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblError;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// ddlCountry control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCountry;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// ddlState control.
+        /// ComboBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlState;
+        protected global::AjaxControlToolkit.ComboBox ComboBox1;
 
         /// <summary>
-        /// ddlDistrict control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlDistrict;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
-        /// btnSave control.
+        /// PS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
+        protected global::AjaxControlToolkit.PasswordStrength PS;
 
         /// <summary>
-        /// gvUserSelections control.
+        /// Panel3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvUserSelections;
+        protected global::System.Web.UI.WebControls.Panel Panel3;
 
         /// <summary>
-        /// UpdateProgress1 control.
+        /// Panel4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdateProgress UpdateProgress1;
+        protected global::System.Web.UI.WebControls.Panel Panel4;
+
+        /// <summary>
+        /// DPE1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.DragPanelExtender DPE1;
+
+        /// <summary>
+        /// LinkButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+
+        /// <summary>
+        /// cbe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ConfirmButtonExtender cbe;
     }
 }

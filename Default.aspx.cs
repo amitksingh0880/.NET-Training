@@ -94,5 +94,9 @@ namespace CountryCodeApplication
             LoadPhoneNumbers();
         }
 
+        protected void gvPhoneNumbers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

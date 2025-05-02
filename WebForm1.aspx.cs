@@ -13,15 +13,13 @@ namespace CountryCodeApplication
         {
             if (!IsPostBack)
             {
-                Lbl.Text = "";
-                Txt1.Text = "";
-                Txt2.Text = "";
+                lbl_time.Text = DateTime.Now.ToLongTimeString();
             }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Timer1_Tick(object sender, EventArgs e)
         {
-            Lbl.Text = "User data inserted successfully";
+            lbl_time.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

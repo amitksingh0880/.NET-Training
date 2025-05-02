@@ -20,7 +20,7 @@
 <br /><br />
 <asp:GridView ID="gvPhoneNumbers" runat="server" AutoGenerateColumns="false" 
     AllowPaging="true" PageSize="5" BorderStyle="Solid" BorderWidth="1" 
-    BorderColor="#999" OnPageIndexChanging="gvPhoneNumbers_PageIndexChanging">
+    BorderColor="#999" OnPageIndexChanging="gvPhoneNumbers_PageIndexChanging" OnSelectedIndexChanged="gvPhoneNumbers_SelectedIndexChanged">
     <Columns>
         <asp:BoundField DataField="ID" HeaderText="ID" />
         <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" />
