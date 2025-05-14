@@ -10,6 +10,7 @@
     <form id="form1" runat="server">
         <div>
              <h1>You are not authorized to access the Page.</h1>
+              <a class="link-button" href="Dashboard.aspx">→ Navigate to Dashboard...</a>
         </div>
     </form>
 </body>

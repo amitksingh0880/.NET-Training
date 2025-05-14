@@ -41,6 +41,10 @@
     <form id="form1" runat="server">
         <div class="grid-container">
             <asp:Label ID="lblError" runat="server" CssClass="error"></asp:Label>
+            <asp:TextBox ID="txtSearch" runat="server" Placeholder="Search by Username" />
+           <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" />
+            <asp:Button ID="btnClear" runat="server" Text="Clear" OnClick="btnClear_Click" />
+            <br /><br />
             <asp:GridView ID="userDatas" runat="server" AutoGenerateColumns="false" 
                 CssClass="grid-view" BorderStyle="Solid" BorderWidth="1" BorderColor="#999">
                 <Columns>

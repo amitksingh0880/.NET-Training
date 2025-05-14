@@ -132,7 +132,7 @@
     DragHandleID="Panel4" />
 
 
-        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">
+        <asp:LinkButton ID="LinkButton1" runat="server" >
     Click Me
 </asp:LinkButton>
 
